@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "bLdZGqdV1N2geoYL1leL+TlNvMPAPeXfMx+aAThndyp7kaUSD+hEO0LJ+k3i9cTGwUi2K3CtHXhGc8+qQpV+xg==",
+  "dgSpecHash": "o9DGj6FkMOrvNujNz3PO+oFbiIQ1tdsWxzmOAFO0ZdOUVOBjG/ORki+l3iwlkqlKa4CjCPRjLvrnQRpEd8ygFw==",
   "success": true,
   "projectFilePath": "C:\\2020-2021-DEVPROG-PROJECT-EliasWyffels\\Heartstone\\Heartstone\\Heartstone.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elias\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\elias\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512"

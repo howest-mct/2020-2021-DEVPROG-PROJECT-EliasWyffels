@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "J7m9DR9qOJpZCZEMrccGUG7LTEigDqAOsOn3frClR1XO32/NkClSleZQt8orfAciCycKpTTx9JsYgfS5dJUoGQ==",
+  "dgSpecHash": "6WXOd2iAR3BZIebBsTOvJFD6UMyUNWoW9ZNqzq5rM64U7gZZmaMB8kgW5K6b7YRrd2bdSJzPdxzatrTy9fWDJQ==",
   "success": true,
   "projectFilePath": "C:\\2020-2021-DEVPROG-PROJECT-EliasWyffels\\Heartstone\\Heartstone.UWP\\Heartstone.UWP.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\elias\\.nuget\\packages\\microsoft.netcore.universalwindowsplatform\\6.1.9\\microsoft.netcore.universalwindowsplatform.6.1.9.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\microsoft.ui.xaml\\2.3.191211002\\microsoft.ui.xaml.2.3.191211002.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\elias\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform\\6.1.9\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.6.1.9.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\runtime.win10-arm.microsoft.net.native.compiler\\2.1.8\\runtime.win10-arm.microsoft.net.native.compiler.2.1.8.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\runtime.win10-arm.microsoft.net.native.sharedlibrary\\2.1.8\\runtime.win10-arm.microsoft.net.native.sharedlibrary.2.1.8.nupkg.sha512",

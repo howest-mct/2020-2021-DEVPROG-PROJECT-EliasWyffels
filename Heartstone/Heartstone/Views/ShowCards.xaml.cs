@@ -20,9 +20,9 @@ namespace Heartstone.Views
 
         private void SetTitel(string name)
         {
-            titel.Text = name.ToUpper();
+            titel.Text = name;
 
-            switch (name)
+            switch (name.ToLower())
             {
                 case "hunter":
                     classcolor.BackgroundColor = Color.FromHex("#016E01");
