@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Heartstone.Views.FilterPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <Grid Padding="10">
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <BoxView Grid.Row="0" Grid.Column="0" BackgroundColor="#016E01"/>
+            <Image Grid.Row="0" Grid.Column="0" Source="https://img.rankedboost.com/wp-content/uploads/2019/05/WoW-Classic-Hunter-Guide.png" VerticalOptions="Center" />
+            <Label Grid.Row="0" Grid.Column="0" x:Name="hunterlbl"  Text="Hunter" FontAttributes="Bold" TextColor="White" FontSize="20" VerticalOptions="End" HorizontalOptions="Center" />
+            <Button Grid.Row="0" Grid.Column="0" Pressed="Button_Pressed" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+
+            <BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="#8E1002" />
+            <Image Grid.Row="0" Grid.Column="1" Source="https://img.rankedboost.com/wp-content/uploads/2019/05/WoW-Classic-Warrior-Guide.png" VerticalOptions="Center" />
+            <Label Grid.Row="0" Grid.Column="1" x:Name="warriorlbl"  Text="Warrior" FontAttributes="Bold" TextColor="White" FontSize="20" VerticalOptions="End" HorizontalOptions="Center" />
+            <Button Grid.Row="0" Grid.Column="1" Pressed="Button_Pressed_1" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+
+            <BoxView Grid.Row="0" Grid.Column="2" BackgroundColor="#4C4D48" />
+            <Image Grid.Row="0" Grid.Column="2" Source="https://img.rankedboost.com/wp-content/uploads/2019/05/WoW-Classic-Rogue-Guide.png" VerticalOptions="Center" />
+            <Label Grid.Row="0" Grid.Column="2" x:Name="roguelbl"  Text="Rogue" FontAttributes="Bold" TextColor="White" FontSize="20" VerticalOptions="End" HorizontalOptions="Center" />
+            <Button Grid.Row="0" Grid.Column="2" Pressed="Button_Pressed_2" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+
+            <BoxView Grid.Row="1" Grid.Column="0" BackgroundColor="#7624AD" />
+            <Image Grid.Row="1" Grid.Column="0" Source="https://img.rankedboost.com/wp-content/uploads/2019/05/WoW-Classic-Warlock-Guide.png" VerticalOptions="Center" />
+            <Label Grid.Row="1" Grid.Column="0" x:Name="warlocklbl"  Text="Warlock" FontAttributes="Bold" TextColor="White" FontSize="20" VerticalOptions="End" HorizontalOptions="Center" />
+            <Button Grid.Row="1" Grid.Column="0" Pressed="Button_Pressed_3" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+
+            <BoxView Grid.Row="1" Grid.Column="1" BackgroundColor="#AA8F00" />
+            <Image Grid.Row="1" Grid.Column="1" Source="https://img.rankedboost.com/wp-content/uploads/2019/05/WoW-Classic-Paladin-Guide.png" VerticalOptions="Center" />
+            <Label Grid.Row="1" Grid.Column="1" x:Name="paladinlbl"  Text="Paladin" FontAttributes="Bold" TextColor="White" FontSize="20" VerticalOptions="End" HorizontalOptions="Center" />
+            <Button Grid.Row="1" Grid.Column="1" Pressed="Button_Pressed_4" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+
+            <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="#703606" />
+            <Image Grid.Row="1" Grid.Column="2" Source="https://img.rankedboost.com/wp-content/uploads/2019/05/WoW-Classic-Druid-Guide.png" VerticalOptions="Center" />
+            <Label Grid.Row="1" Grid.Column="2" x:Name="druidlbl"  Text="Druid" FontAttributes="Bold" TextColor="White" FontSize="20" VerticalOptions="End" HorizontalOptions="Center" />
+            <Button Grid.Row="1" Grid.Column="2" Pressed="Button_Pressed_5" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+
+            <BoxView Grid.Row="2" Grid.Column="0" BackgroundColor="#0092AB" />
+            <Image Grid.Row="2" Grid.Column="0" Source="https://img.rankedboost.com/wp-content/uploads/2019/05/WoW-Classic-Mage-Guide.png" VerticalOptions="Center" />
+            <Label Grid.Row="2" Grid.Column="0" x:Name="magelbl"  Text="Mage" FontAttributes="Bold" TextColor="White" FontSize="20" VerticalOptions="End" HorizontalOptions="Center" />
+            <Button Grid.Row="2" Grid.Column="0" Pressed="Button_Pressed_6" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+
+            <BoxView Grid.Row="2" Grid.Column="1" BackgroundColor="#C7C19F" />
+            <Image Grid.Row="2" Grid.Column="1" Source="https://img.rankedboost.com/wp-content/uploads/2019/05/WoW-Classic-Priest-Guide.png" VerticalOptions="Center" />
+            <Label Grid.Row="2" Grid.Column="1" x:Name="priestlbl"  Text="Priest" FontAttributes="Bold" TextColor="White" FontSize="20" VerticalOptions="End" HorizontalOptions="Center" />
+            <Button Grid.Row="2" Grid.Column="1" Pressed="Button_Pressed_7" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+
+            <BoxView Grid.Row="2" Grid.Column="2" BackgroundColor="#8E1002" />
+            <Image Grid.Row="2" Grid.Column="2" Source="https://img.rankedboost.com/wp-content/uploads/2019/05/WoW-Classic-Shaman-Guide.png" VerticalOptions="Center" />
+            <Label Grid.Row="2" Grid.Column="2" x:Name="shamanlbl"  Text="Shaman" FontAttributes="Bold" TextColor="White" FontSize="20" VerticalOptions="End" HorizontalOptions="Center" />
+            <Button Grid.Row="2" Grid.Column="2" Pressed="Button_Pressed_8" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+
+            <BoxView Grid.Row="3" Grid.Column="0" BackgroundColor="LightGray" />
+            <Image Grid.Row="3" Grid.Column="0" Source="https://metastats.net/images/class/neutral.png" VerticalOptions="Center" />
+            <Label Grid.Row="3" Grid.Column="0" x:Name="neutrallbl"  Text="Neutral" FontAttributes="Bold" TextColor="White" FontSize="20" VerticalOptions="End" HorizontalOptions="Center" />
+            <Button Grid.Row="3" Grid.Column="0" Pressed="Button_Pressed_9" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+
+            <BoxView Grid.Row="3" Grid.Column="1" BackgroundColor="Black" />
+            <BoxView Grid.Row="3" Grid.Column="2" BackgroundColor="LightGreen" />
+            <Image Grid.Row="3" Grid.Column="2" Source="https://www.impetus.com/sites/default/files/plus.png" VerticalOptions="Center" />
+            <Label Grid.Row="3" Grid.Column="2" x:Name="cardlbl"  Text="Create a card" FontAttributes="Bold" TextColor="White" FontSize="20" VerticalOptions="End" HorizontalOptions="Center" />
+            <Button Grid.Row="3" Grid.Column="2" Pressed="Button_Pressed_10" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
