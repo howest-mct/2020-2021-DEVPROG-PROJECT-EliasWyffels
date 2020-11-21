@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Heartstone.Models;
+using Heartstone.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,10 +14,16 @@ namespace Heartstone.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ShowCards : ContentPage
     {
-        public ShowCards(string v)
+        public ShowCards(string name)
         {
             InitializeComponent();
-            SetTitel(v);
+            SetTitel(name);
+            LoadCards(name);
+        }
+
+        private async void LoadCards(string name)
+        {
+            lvwCards.ItemsSource = await HeartstoneRepository.GetCardsClass(name);
         }
 
         private void SetTitel(string name)

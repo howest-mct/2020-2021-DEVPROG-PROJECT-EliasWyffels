@@ -20,5 +20,9 @@ namespace Heartstone.Models
         public string artist { get; set; }
         public string playerClass { get; set; }
         public List<Mechanic> mechanics { get; set; }
+        public string afbeelding { get => "https://art.hearthstonejson.com/v1/render/latest/enUS/512x/" + cardId + ".png"; }
+
+
+
     }
 }
