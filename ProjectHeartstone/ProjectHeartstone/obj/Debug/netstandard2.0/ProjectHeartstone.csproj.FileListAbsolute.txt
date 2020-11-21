@@ -1,0 +1,16 @@
+C:\device programming\2020-2021-DEVPROG-PROJECT-EliasWyffels\ProjectHeartstone\ProjectHeartstone\bin\Debug\netstandard2.0\ProjectHeartstone.deps.json
+C:\device programming\2020-2021-DEVPROG-PROJECT-EliasWyffels\ProjectHeartstone\ProjectHeartstone\bin\Debug\netstandard2.0\ProjectHeartstone.dll
+C:\device programming\2020-2021-DEVPROG-PROJECT-EliasWyffels\ProjectHeartstone\ProjectHeartstone\bin\Debug\netstandard2.0\ref\ProjectHeartstone.dll
+C:\device programming\2020-2021-DEVPROG-PROJECT-EliasWyffels\ProjectHeartstone\ProjectHeartstone\bin\Debug\netstandard2.0\ProjectHeartstone.pdb
+C:\device programming\2020-2021-DEVPROG-PROJECT-EliasWyffels\ProjectHeartstone\ProjectHeartstone\obj\Debug\netstandard2.0\ProjectHeartstone.csprojAssemblyReference.cache
+C:\device programming\2020-2021-DEVPROG-PROJECT-EliasWyffels\ProjectHeartstone\ProjectHeartstone\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\device programming\2020-2021-DEVPROG-PROJECT-EliasWyffels\ProjectHeartstone\ProjectHeartstone\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\device programming\2020-2021-DEVPROG-PROJECT-EliasWyffels\ProjectHeartstone\ProjectHeartstone\obj\Debug\netstandard2.0\ProjectHeartstone.AssemblyInfoInputs.cache
+C:\device programming\2020-2021-DEVPROG-PROJECT-EliasWyffels\ProjectHeartstone\ProjectHeartstone\obj\Debug\netstandard2.0\ProjectHeartstone.AssemblyInfo.cs
+C:\device programming\2020-2021-DEVPROG-PROJECT-EliasWyffels\ProjectHeartstone\ProjectHeartstone\obj\Debug\netstandard2.0\ProjectHeartstone.csproj.CoreCompileInputs.cache
+C:\device programming\2020-2021-DEVPROG-PROJECT-EliasWyffels\ProjectHeartstone\ProjectHeartstone\obj\Debug\netstandard2.0\XamlC.stamp
+C:\device programming\2020-2021-DEVPROG-PROJECT-EliasWyffels\ProjectHeartstone\ProjectHeartstone\obj\Debug\netstandard2.0\ProjectHeartstone.dll
+C:\device programming\2020-2021-DEVPROG-PROJECT-EliasWyffels\ProjectHeartstone\ProjectHeartstone\obj\Debug\netstandard2.0\ref\ProjectHeartstone.dll
+C:\device programming\2020-2021-DEVPROG-PROJECT-EliasWyffels\ProjectHeartstone\ProjectHeartstone\obj\Debug\netstandard2.0\ProjectHeartstone.pdb
+C:\device programming\2020-2021-DEVPROG-PROJECT-EliasWyffels\ProjectHeartstone\ProjectHeartstone\obj\Debug\netstandard2.0\Views\FilterPage.xaml.g.cs
+C:\device programming\2020-2021-DEVPROG-PROJECT-EliasWyffels\ProjectHeartstone\ProjectHeartstone\obj\Debug\netstandard2.0\Views\ShowCards.xaml.g.cs
