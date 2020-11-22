@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "o9DGj6FkMOrvNujNz3PO+oFbiIQ1tdsWxzmOAFO0ZdOUVOBjG/ORki+l3iwlkqlKa4CjCPRjLvrnQRpEd8ygFw==",
+  "dgSpecHash": "9cUHjn4rHaE/WV3cpGTBnUoxXao3cwVy3NwGIfNV7y/STJM6lgOapWAOd49/zyjP7jWWMI+w+91yQLretHYVrg==",
   "success": true,
   "projectFilePath": "C:\\2020-2021-DEVPROG-PROJECT-EliasWyffels\\Heartstone\\Heartstone\\Heartstone.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elias\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\elias\\.nuget\\packages\\morelinq\\3.3.2\\morelinq.3.3.2.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

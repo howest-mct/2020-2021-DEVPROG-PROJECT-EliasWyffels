@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ncDwIrV9BG8azb0xI9E5aYzeq5O60xTdr2RnQ9TTuD5bklH6LD5Elq/92sMf/XvpTIMzefag/E3HYdMzfkIdVw==",
+  "dgSpecHash": "NpNANHdXB3UjsihupAoEeZ23H0t/StbdW5MFnlr7Exe0jtsT+kJK9xjU0TxWv4qSmVENRVHd+eXVq/zR48xLPA==",
   "success": true,
   "projectFilePath": "C:\\2020-2021-DEVPROG-PROJECT-EliasWyffels\\Heartstone\\Heartstone.Android\\Heartstone.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\elias\\.nuget\\packages\\morelinq\\3.3.2\\morelinq.3.3.2.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",

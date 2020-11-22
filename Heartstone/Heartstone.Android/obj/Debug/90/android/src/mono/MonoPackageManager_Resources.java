@@ -5,6 +5,7 @@ public class MonoPackageManager_Resources {
 		"Heartstone.Android.dll",
 		"FormsViewGroup.dll",
 		"Heartstone.dll",
+		"MoreLinq.dll",
 		"Newtonsoft.Json.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",

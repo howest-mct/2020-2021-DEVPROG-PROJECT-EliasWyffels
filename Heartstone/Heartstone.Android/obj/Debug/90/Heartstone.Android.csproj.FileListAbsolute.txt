@@ -464,3 +464,5 @@ C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone.Android\obj\Debu
 C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone.Android\obj\Debug\90\android\assets\MoreLinq.dll
+C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone.Android\obj\Debug\90\android\assets\MoreLinq.pdb

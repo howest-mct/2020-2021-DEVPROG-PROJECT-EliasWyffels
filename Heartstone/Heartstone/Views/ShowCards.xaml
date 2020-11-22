@@ -17,7 +17,21 @@
                 <BoxView Grid.Row="0" Grid.Column="0" x:Name="classcolor" HorizontalOptions="FillAndExpand"/>
                 <Label Padding="20" Grid.Row="0" Grid.Column="0" x:Name="titel" Text="" TextColor="White" FontSize="24" HorizontalTextAlignment="Start" VerticalOptions="Center"/>
             </Grid>
+            
+            <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="Minions" Text="Minions" Grid.Row="0" Grid.Column="0" BackgroundColor="#FCD237" TextColor="#2C2319" CornerRadius="20" BorderWidth="3" BorderColor="#FCD237" Pressed="Minions_Pressed"/>
+                <Button x:Name="Spells" Text="Spells" Grid.Row="0" Grid.Column="1" BackgroundColor="#FCD237" TextColor="#2C2319" CornerRadius="20" BorderWidth="3" BorderColor="#FCD237" Pressed="Spells_Pressed"/>
+                <Button x:Name="Weapons" Text="Weapons" Grid.Row="0" Grid.Column="2" BackgroundColor="#FCD237" TextColor="#2C2319" CornerRadius="20" BorderWidth="3" BorderColor="#FCD237" Pressed="Weapons_Pressed"/>
 
+            </Grid>
             <ListView Margin="5" x:Name="lvwCards" RowHeight="100">
                 <ListView.ItemTemplate>
                     <DataTemplate>
