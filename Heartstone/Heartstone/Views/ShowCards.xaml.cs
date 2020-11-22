@@ -20,6 +20,8 @@ namespace Heartstone.Views
         private List<Card> weapons = new List<Card>();
         private List<Card> spells = new List<Card>();
 
+        private List<Card> currentlist = new List<Card>();
+
         private bool Minionsgedrukt = false;
         private bool Spellsgedrukt = false;
         private bool Weaponsgedrukt = false;
@@ -57,6 +59,7 @@ namespace Heartstone.Views
             minions = minions.OrderBy(o => o.name).ToList();
             spells = spells.OrderBy(o => o.name).ToList();
             weapons = weapons.OrderBy(o => o.name).ToList();
+            currentlist = all;
 
             var uniqueall = all.DistinctBy(i => i.name);
             lvwCards.ItemsSource = uniqueall;
@@ -122,6 +125,7 @@ namespace Heartstone.Views
                 Weapons.BorderColor = Color.FromHex("#FCD237");
                 Spellsgedrukt = false;
                 Weaponsgedrukt = false;
+                currentlist = minions;
             }
             else
             {
@@ -129,6 +133,7 @@ namespace Heartstone.Views
                 var uniqueall = all.DistinctBy(i => i.name);
                 lvwCards.ItemsSource = uniqueall;
                 Minions.BorderColor = Color.FromHex("#FCD237");
+                currentlist = all;
             }
             
         }
@@ -145,6 +150,7 @@ namespace Heartstone.Views
                 Weapons.BorderColor = Color.FromHex("#FCD237");
                 Minionsgedrukt = false;
                 Weaponsgedrukt = false;
+                currentlist = spells;
             }
             else
             {
@@ -152,6 +158,7 @@ namespace Heartstone.Views
                 var uniqueall = all.DistinctBy(i => i.name);
                 lvwCards.ItemsSource = uniqueall;
                 Spells.BorderColor = Color.FromHex("#FCD237");
+                currentlist = all;
             }
 
         }
@@ -168,6 +175,7 @@ namespace Heartstone.Views
                 Minions.BorderColor = Color.FromHex("#FCD237");
                 Minionsgedrukt = false;
                 Spellsgedrukt = false;
+                currentlist = weapons;
             }
             else
             {
@@ -175,6 +183,7 @@ namespace Heartstone.Views
                 var uniqueall = all.DistinctBy(i => i.name);
                 lvwCards.ItemsSource = uniqueall;
                 Weapons.BorderColor = Color.FromHex("#FCD237");
+                currentlist = all;
             }
 
         }
@@ -182,6 +191,13 @@ namespace Heartstone.Views
         private void Button_Pressed(object sender, EventArgs e)
         {
             Navigation.PopAsync();
+        }
+
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var uniquecurrent = currentlist.DistinctBy(i => i.name);
+            var searchlist = uniquecurrent.Where(c => c.name.ToLower().Contains(searchbar.Text.ToLower()));
+            lvwCards.ItemsSource = searchlist;
         }
     }
 }
