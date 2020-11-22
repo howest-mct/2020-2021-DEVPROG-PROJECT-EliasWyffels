@@ -16,7 +16,6 @@ namespace Heartstone.Models
         public string type { get; set; }
         public string rarity { get; set; }
         public string cost { get; set; }
-        public string faction { get; set; }
         public string artist { get; set; }
         public string playerClass { get; set; }
         public List<Mechanic> mechanics { get; set; }

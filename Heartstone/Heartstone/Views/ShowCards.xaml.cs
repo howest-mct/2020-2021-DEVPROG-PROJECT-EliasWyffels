@@ -39,6 +39,8 @@ namespace Heartstone.Views
             List<Card> lijst = await HeartstoneRepository.GetCardsClass(name);
             foreach (Card item in lijst)
             {
+                if (item.artist != null)
+                {
                     if (item.type == "Minion")
                     {
                         minions.Add(item);
@@ -54,6 +56,8 @@ namespace Heartstone.Views
                         weapons.Add(item);
                         all.Add(item);
                     }
+                }
+                    
             }
             all = all.OrderBy(o => o.name).ToList();
             minions = minions.OrderBy(o => o.name).ToList();

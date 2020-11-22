@@ -1,12 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Heartstone.Views.CardDetail">
+             x:Class="Heartstone.Views.CardDetail"
+             BackgroundColor="#73471C"
+             NavigationPage.IconColor="Black">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Image x:Name="CardImg" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="500"/>
+            <Grid BackgroundColor="Black" VerticalOptions="EndAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Type" TextColor="White"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="Artist" TextColor="White"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="Mechanic(s)" TextColor="White"/>
+                <Label Grid.Row="0" Grid.Column="1" x:Name="type" TextColor="White"/>
+                <Label Grid.Row="1" Grid.Column="1" x:Name="artist" TextColor="White"/>
+                <Label Grid.Row="2" Grid.Column="1" x:Name="mechanics" TextColor="White"/>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
