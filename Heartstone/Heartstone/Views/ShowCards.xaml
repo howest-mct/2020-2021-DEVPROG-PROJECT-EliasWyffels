@@ -39,7 +39,7 @@
             <ListView Margin="5" x:Name="lvwCards" RowHeight="100">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
+                        <ViewCell Tapped="ViewCell_Tapped">
                             <Frame BackgroundColor="#EDA115" Margin="5">
                                 <Grid>
                                     <Grid.RowDefinitions>

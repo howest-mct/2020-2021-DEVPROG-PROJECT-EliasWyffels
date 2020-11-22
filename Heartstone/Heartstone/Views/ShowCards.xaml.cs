@@ -199,5 +199,12 @@ namespace Heartstone.Views
             var searchlist = uniquecurrent.Where(c => c.name.ToLower().Contains(searchbar.Text.ToLower()));
             lvwCards.ItemsSource = searchlist;
         }
+
+        private void ViewCell_Tapped(object sender, EventArgs e)
+        {
+            Card CardSelected = (Card)lvwCards.SelectedItem;
+            Navigation.PushAsync(new CardDetail(CardSelected));
+            lvwCards.SelectedItem = null;
+        }
     }
 }
