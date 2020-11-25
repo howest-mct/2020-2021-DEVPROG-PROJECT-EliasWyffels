@@ -7,6 +7,8 @@ public class MonoPackageManager_Resources {
 		"Heartstone.dll",
 		"MoreLinq.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.Media.dll",
+		"RestSharp.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",

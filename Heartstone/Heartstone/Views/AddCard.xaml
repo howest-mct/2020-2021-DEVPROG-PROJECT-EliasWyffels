@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Heartstone.Views.AddCard">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name="voorbeeldimg" WidthRequest="500" HeightRequest="500"/>
+            <Button Text="preview" x:Name="preview" Pressed="preview_Pressed"/>
+            <Label x:Name="Test" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

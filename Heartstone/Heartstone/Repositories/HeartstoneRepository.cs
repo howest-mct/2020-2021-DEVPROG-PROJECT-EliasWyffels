@@ -1,7 +1,10 @@
 ﻿using Heartstone.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using RestSharp;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,5 +49,52 @@ namespace Heartstone.Repositories
             httpclient.DefaultRequestHeaders.Add("X-RapidAPI-Key", key);
             return httpclient;
         }
+        public static async Task<string> ConvertImgToUrl(string Image)
+        {
+            var client = new RestClient("https://api.imgur.com/3/image");
+            client.Timeout = -1;
+            var request = new RestRequest(Method.POST);
+            request.AddHeader("Authorization", "Client-ID 2400cb3fc4ad10c");
+            request.AlwaysMultipartFormData = true;
+            request.AddParameter("image", Image);
+            IRestResponse response = client.Execute(request);
+            string json = response.Content;
+            Root account = JsonConvert.DeserializeObject<Root>(json);
+            return account.data.link;
+        }
+
+
+
+        //public static async Task<string> ConvertImgToUrl(string Image)
+        //{
+        //    string url = "https://api.imgur.com/3/image";
+
+        //    using (HttpClient client = GetClient2())
+        //    {
+        //        var parameters = new Dictionary<string, string> { { "image", Image } };
+        //        string json = JsonConvert.SerializeObject(parameters);
+        //        StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+        //        var response = await client.PostAsync(url, content);
+        //        if (response.StatusCode == HttpStatusCode.OK)
+        //        {
+        //            var test = response.Content;
+        //            return "alles ok";
+        //        }
+        //        else
+        //        {
+        //            string errorMsg = $"Unsuccesful POST to url: {url}, object: {json}";
+        //            throw new Exception(errorMsg);
+        //            return "oepsie";
+        //        }
+        //    }
+        //}
+
+        //private static HttpClient GetClient2()
+        //{
+        //    HttpClient httpclient = new HttpClient();
+        //    httpclient.DefaultRequestHeaders.Add("Accept", "application/json");
+        //    httpclient.DefaultRequestHeaders.Add("Authorization", "Client-ID 2400cb3fc4ad10c");
+        //    return httpclient;
+        //}
     }
 }

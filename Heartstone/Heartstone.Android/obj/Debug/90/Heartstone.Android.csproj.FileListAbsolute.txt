@@ -466,3 +466,7 @@ C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone.Android\obj\Debu
 C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
 C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone.Android\obj\Debug\90\android\assets\MoreLinq.dll
 C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone.Android\obj\Debug\90\android\assets\MoreLinq.pdb
+C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone.Android\obj\Debug\90\android\assets\Plugin.Media.dll
+C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone.Android\obj\Debug\90\android\assets\Plugin.Media.pdb
+C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone.Android\obj\Debug\90\android\src\crc646957603ea1820544\MediaPickerActivity.java
+C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone.Android\obj\Debug\90\android\assets\RestSharp.dll

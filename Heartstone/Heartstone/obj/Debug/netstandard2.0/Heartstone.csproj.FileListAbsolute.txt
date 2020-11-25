@@ -12,6 +12,7 @@ C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone\bin\Debug\netsta
 C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone\obj\Debug\netstandard2.0\Heartstone.dll
 C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone\obj\Debug\netstandard2.0\ref\Heartstone.dll
 C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone\obj\Debug\netstandard2.0\Heartstone.pdb
+C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone\obj\Debug\netstandard2.0\Views\CardDetail.xaml.g.cs
+C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone\obj\Debug\netstandard2.0\Views\AddCard.xaml.g.cs
 C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone\obj\Debug\netstandard2.0\Heartstone.csproj.CoreCompileInputs.cache
 C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone\obj\Debug\netstandard2.0\XamlC.stamp
-C:\2020-2021-DEVPROG-PROJECT-EliasWyffels\Heartstone\Heartstone\obj\Debug\netstandard2.0\Views\CardDetail.xaml.g.cs

@@ -19,59 +19,59 @@ namespace Heartstone.Views
             InitializeComponent();
         }
 
-        private async void Button_Pressed(object sender, EventArgs e)
+        private void Button_Pressed(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ShowCards(hunterlbl.Text));
+            Navigation.PushAsync(new ShowCards(hunterlbl.Text));
         }
 
-        private async void Button_Pressed_1(object sender, EventArgs e)
+        private void Button_Pressed_1(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ShowCards(warriorlbl.Text));
+            Navigation.PushAsync(new ShowCards(warriorlbl.Text));
         }
 
-        private async void Button_Pressed_2(object sender, EventArgs e)
+        private void Button_Pressed_2(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ShowCards(roguelbl.Text));
+            Navigation.PushAsync(new ShowCards(roguelbl.Text));
         }
 
-        private async void Button_Pressed_3(object sender, EventArgs e)
+        private void Button_Pressed_3(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ShowCards(warlocklbl.Text));
+            Navigation.PushAsync(new ShowCards(warlocklbl.Text));
         }
 
-        private async void Button_Pressed_4(object sender, EventArgs e)
+        private void Button_Pressed_4(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ShowCards(paladinlbl.Text));
+            Navigation.PushAsync(new ShowCards(paladinlbl.Text));
         }
 
-        private async void Button_Pressed_5(object sender, EventArgs e)
+        private void Button_Pressed_5(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ShowCards(druidlbl.Text));
+            Navigation.PushAsync(new ShowCards(druidlbl.Text));
         }
 
-        private async void Button_Pressed_6(object sender, EventArgs e)
+        private void Button_Pressed_6(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ShowCards(magelbl.Text));
+            Navigation.PushAsync(new ShowCards(magelbl.Text));
         }
 
-        private async void Button_Pressed_7(object sender, EventArgs e)
+        private void Button_Pressed_7(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ShowCards(priestlbl.Text));
+            Navigation.PushAsync(new ShowCards(priestlbl.Text));
         }
 
-        private async void Button_Pressed_8(object sender, EventArgs e)
+        private void Button_Pressed_8(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ShowCards(shamanlbl.Text));
+            Navigation.PushAsync(new ShowCards(shamanlbl.Text));
         }
 
-        private async void Button_Pressed_9(object sender, EventArgs e)
+        private void Button_Pressed_9(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ShowCards(neutrallbl.Text));
+            Navigation.PushAsync(new ShowCards(neutrallbl.Text));
         }
 
         private void Button_Pressed_10(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new AddCard());
         }
     }
 }

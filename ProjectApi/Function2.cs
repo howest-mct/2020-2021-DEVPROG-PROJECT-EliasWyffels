@@ -17,7 +17,7 @@ namespace ProjectApi
     {
         [FunctionName("Function2")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "getcards/{artist}")] HttpRequest req, string artist,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "getcards/{artist}")] HttpRequest req, string artist,
             ILogger log)
         {
             string connectionString = Environment.GetEnvironmentVariable("AzureStorage");
