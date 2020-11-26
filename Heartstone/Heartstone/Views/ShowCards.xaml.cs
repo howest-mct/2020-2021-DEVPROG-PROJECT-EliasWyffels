@@ -34,9 +34,15 @@ namespace Heartstone.Views
 
         private async void LoadCards(string name)
         {
-            
-
-            List<Card> lijst = await HeartstoneRepository.GetCardsClass(name);
+            List<Card> lijst;
+            if (name == "Custom Cards")
+            {
+                lijst = await HeartstoneRepository.GetCustomCards();
+            }
+            else
+            {
+                lijst = await HeartstoneRepository.GetCardsClass(name);
+            }
             foreach (Card item in lijst)
             {
                 if (item.artist != null)

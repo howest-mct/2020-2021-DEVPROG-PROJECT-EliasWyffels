@@ -69,7 +69,11 @@
             <Label Grid.Row="3" Grid.Column="0" x:Name="neutrallbl"  Text="Neutral" FontAttributes="Bold" TextColor="White" FontSize="20" VerticalOptions="End" HorizontalOptions="Center" />
             <Button Grid.Row="3" Grid.Column="0" Pressed="Button_Pressed_9" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
 
-            <BoxView Grid.Row="3" Grid.Column="1" BackgroundColor="Black" />
+            <BoxView Grid.Row="3" Grid.Column="1" BackgroundColor="#73471C" />
+            <Image Grid.Row="3" Grid.Column="2" Source="https://static.wikia.nocookie.net/hearthstone_gamepedia/images/1/1a/Card_back-Classic.png" VerticalOptions="Center" />
+            <Label Grid.Row="3" Grid.Column="1" x:Name="customlbl"  Text="Custom Cards" FontAttributes="Bold" TextColor="White" FontSize="20" VerticalOptions="End" HorizontalOptions="Center" />
+            <Button Grid.Row="3" Grid.Column="1" Pressed="Button_Pressed_11" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+            
             <BoxView Grid.Row="3" Grid.Column="2" BackgroundColor="LightGreen" />
             <Image Grid.Row="3" Grid.Column="2" Source="https://www.impetus.com/sites/default/files/plus.png" VerticalOptions="Center" />
             <Label Grid.Row="3" Grid.Column="2" x:Name="cardlbl"  Text="Create a card" FontAttributes="Bold" TextColor="White" FontSize="20" VerticalOptions="End" HorizontalOptions="Center" />

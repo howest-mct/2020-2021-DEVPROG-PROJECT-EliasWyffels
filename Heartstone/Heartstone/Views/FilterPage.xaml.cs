@@ -73,5 +73,10 @@ namespace Heartstone.Views
         {
             Navigation.PushAsync(new AddCard());
         }
+
+        private void Button_Pressed_11(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ShowCards(customlbl.Text));
+        }
     }
 }

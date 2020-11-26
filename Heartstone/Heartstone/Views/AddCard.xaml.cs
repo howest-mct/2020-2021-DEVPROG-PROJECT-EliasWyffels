@@ -134,6 +134,7 @@ namespace Heartstone.Views
             {
                 c.afbeelding = await HeartstoneRepository.ConvertImgToUrl(base64String);
                 await HeartstoneRepository.SendToDatabase(c);
+
             }
             
         }
