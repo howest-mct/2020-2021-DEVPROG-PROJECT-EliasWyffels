@@ -30,8 +30,18 @@ namespace ProjectApi
             var queryResult = await table.ExecuteQuerySegmentedAsync<CardEntity>(rangeQuery, null);
             List<Card> cards = new List<Card>();
 
+
+
             foreach (var reg in queryResult.Results)
             {
+                List<Mechanic> lijst = new List<Mechanic>();
+                string[] parts = reg.mechanics.Split(",");
+                foreach (string item in parts)
+                {
+                    Mechanic m = new Mechanic();
+                    m.name = item;
+                    lijst.Add(m);
+                }
                 cards.Add(new Card()
                 {
                     cardId = reg.RowKey,
@@ -41,6 +51,7 @@ namespace ProjectApi
                     cost = reg.cost,
                     playerClass = reg.playerClass,
                     artist = reg.PartitionKey,
+                    mechanics = lijst,
                     afbeelding = reg.afbeelding
                 });
             }
