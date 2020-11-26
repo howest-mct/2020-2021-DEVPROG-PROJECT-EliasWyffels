@@ -19,6 +19,8 @@ namespace Heartstone.Views
         public AddCard()
         {
             InitializeComponent();
+            ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.FromHex("#EDA115");
+            ((NavigationPage)Application.Current.MainPage).BarTextColor = Color.FromHex("#2C2319");
         }
 
         private async void preview_Pressed(object sender, EventArgs e)
@@ -35,9 +37,14 @@ namespace Heartstone.Views
             var text = file.Path;
             var base64String = Convert.ToBase64String(File.ReadAllBytes(file.Path));
             voorbeeldimg.Source = ImageSource.FromStream(() => file.GetStream());
-            Test.Text = await HeartstoneRepository.ConvertImgToUrl(base64String);
+            var test = await HeartstoneRepository.ConvertImgToUrl(base64String);
 
 
+        }
+
+        private void Confirm_Pressed(object sender, EventArgs e)
+        {
+            var test = playerClass.SelectedItem.ToString();
         }
     }
 }
