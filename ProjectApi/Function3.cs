@@ -40,7 +40,6 @@ namespace ProjectApi
                     rarity = reg.rarity,
                     cost = reg.cost,
                     playerClass = reg.playerClass,
-                    mechanics = reg.mechanics,
                     artist = reg.PartitionKey,
                     afbeelding = reg.afbeelding
                 });

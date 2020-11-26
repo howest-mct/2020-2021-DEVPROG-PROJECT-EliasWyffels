@@ -7,7 +7,8 @@
              Title="Create a card">
     <ContentPage.Content>
         <StackLayout>
-            <Image Margin="10" x:Name="voorbeeldimg" Source="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png"  HeightRequest="200"/>
+            <Label x:Name="Error" TextColor="Red" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Image x:Name="voorbeeldimg" Source="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png"  HeightRequest="200"/>
             
             <Grid>
                 <Grid.RowDefinitions>
@@ -25,7 +26,7 @@
                     <ColumnDefinition Width="100"/>
                 </Grid.ColumnDefinitions>
                 <Label Grid.Column="0" Grid.Row="0" TextColor="#2C2319" Text="Name:" VerticalOptions="Center" HorizontalOptions="End"/>
-                <Entry Grid.Column="1" Grid.Row="0" FontSize="14" TextColor="#2C2319" x:Name="name"  />
+                <Entry Grid.Column="1" Grid.Row="0" FontSize="14" TextColor="#2C2319" x:Name="Name"  />
 
                 <Label Grid.Column="0" Grid.Row="1" TextColor="#2C2319" Text="Type:" VerticalOptions="Center" HorizontalOptions="End"/>
                 <Picker Grid.Column="1" Grid.Row="1" FontSize="14" TextColor="#2C2319" x:Name="type" BackgroundColor="LightGray">
@@ -41,8 +42,8 @@
                     <Picker.Items>
                         <x:String>Free</x:String>
                         <x:String>Common</x:String>
-                        <x:String>Uncommon</x:String>
                         <x:String>Rare</x:String>
+                        <x:String>Epic</x:String>
                         <x:String>Legendary</x:String>
                     </Picker.Items>
                 </Picker>
@@ -65,11 +66,12 @@
                         <x:String>Druid</x:String>
                         <x:String>Warrior"</x:String>
                         <x:String>Shaman</x:String>
+                        <x:String>Demon Hunter</x:String>
                         <x:String>Neutral</x:String>
                     </Picker.Items>
                 </Picker>
                 <Label Grid.Column="0" Grid.Row="6" TextColor="#2C2319" Text="Mechanic(s)*:" VerticalOptions="Center" HorizontalOptions="Center"/>
-                <Entry Grid.Column="1" Grid.Row="6" FontSize="14" TextColor="#2C2319" x:Name="mechanics"/>
+                <Entry Grid.Column="1" Grid.Row="6" FontSize="14" TextColor="#2C2319" x:Name="mechanics" Placeholder="leave empty if no mechanics"/>
             </Grid>
             
             <Grid>

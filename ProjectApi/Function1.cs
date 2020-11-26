@@ -21,6 +21,20 @@ namespace ProjectApi
         {
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             Card reg = JsonConvert.DeserializeObject<Card>(requestBody);
+            string memchanicsstring = "";
+            if (reg.mechanics != null)
+            {
+                
+                foreach (Mechanic item in reg.mechanics)
+                {
+                    memchanicsstring = memchanicsstring + "," + item.name;
+                }
+                memchanicsstring = memchanicsstring.Substring(1);
+            }
+            else
+            {
+                memchanicsstring = null;
+            }
 
             string cardguid = Guid.NewGuid().ToString();
             CardEntity rn = new CardEntity(reg.artist,cardguid)
@@ -30,7 +44,7 @@ namespace ProjectApi
                 rarity = reg.rarity,
                 cost = reg.cost,
                 playerClass = reg.playerClass,
-                mechanics = reg.mechanics,
+                mechanics = memchanicsstring,
                 afbeelding = reg.afbeelding
             };
 

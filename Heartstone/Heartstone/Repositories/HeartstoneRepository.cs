@@ -115,24 +115,10 @@ namespace Heartstone.Repositories
                 {
                     mechanicsList = "No mechanics";
                 }
-                var parameters = new Dictionary<string, string>
-                {
-                    { "name", c.name },
-                    { "type", c.type },
-                    { "rarity", c.rarity },
-                    { "cost", c.cost },
-                    { "playerclass", c.playerClass },
-                    { "mechanics", mechanicsList },
-                    { "afbeelding", c.afbeelding }
-                };
-                string json = JsonConvert.SerializeObject(parameters);
+                string json = JsonConvert.SerializeObject(c);
                 StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
                 var response = await client.PostAsync(url, content);
-                if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    var test = response.Content;
-                }
-                else
+                if (!response.IsSuccessStatusCode)
                 {
                     string errorMsg = $"Unsuccesful POST to url: {url}, object: {json}";
                     throw new Exception(errorMsg);
