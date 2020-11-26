@@ -40,7 +40,6 @@ namespace Heartstone.Repositories
 
             }
         }
-
         private static HttpClient GetClient()
         {
             HttpClient httpclient = new HttpClient();
@@ -96,5 +95,79 @@ namespace Heartstone.Repositories
         //    httpclient.DefaultRequestHeaders.Add("Authorization", "Client-ID 2400cb3fc4ad10c");
         //    return httpclient;
         //}
+
+
+        public static async Task SendToDatabase(Card c)
+        {
+            string url = "https://hearstonecards.azurewebsites.net/api/submitcard";
+            using (HttpClient client = GetClient2())
+            {
+                string mechanicsList = "";
+                if (c.mechanics != null)
+                {
+                    foreach (Mechanic i in c.mechanics)
+                    {
+                        mechanicsList = mechanicsList + "," + i.name;
+                    }
+                    mechanicsList = mechanicsList.Substring(1);
+                }
+                else
+                {
+                    mechanicsList = "No mechanics";
+                }
+                var parameters = new Dictionary<string, string>
+                {
+                    { "name", c.name },
+                    { "type", c.type },
+                    { "rarity", c.rarity },
+                    { "cost", c.cost },
+                    { "playerclass", c.playerClass },
+                    { "mechanics", mechanicsList },
+                    { "afbeelding", c.afbeelding }
+                };
+                string json = JsonConvert.SerializeObject(parameters);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(url, content);
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    var test = response.Content;
+                }
+                else
+                {
+                    string errorMsg = $"Unsuccesful POST to url: {url}, object: {json}";
+                    throw new Exception(errorMsg);
+                }
+            }
+        }
+
+        private static HttpClient GetClient2()
+        {
+            HttpClient httpclient = new HttpClient();
+            httpclient.DefaultRequestHeaders.Add("Accept", "application/json");
+            return httpclient;
+        }
+        public static async Task<List<Card>> GetCustomCards()
+        {
+            using (HttpClient client = GetClient2())
+            {
+                string url = $"https://hearstonecards.azurewebsites.net/api/getallcards";
+                try
+                {
+                    string json = await client.GetStringAsync(url);
+                    if (json != null)
+                    {
+                        return JsonConvert.DeserializeObject<List<Card>>(json);
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
     }
 }
