@@ -71,8 +71,7 @@ namespace Heartstone.Views
             weapons = weapons.OrderBy(o => o.name).ToList();
             currentlist = all;
 
-            var uniqueall = all.DistinctBy(i => i.name);
-            lvwCards.ItemsSource = uniqueall;
+            lvwCards.ItemsSource = all;
         }
 
         private void SetTitel(string name)
@@ -117,6 +116,10 @@ namespace Heartstone.Views
                     classcolor.BackgroundColor = Color.FromHex("#AA8F00");
                     break;
 
+                case "demon hunter":
+                    classcolor.BackgroundColor = Color.FromHex("#A330C9");
+                    break;
+
                 case "neutral":
                     classcolor.BackgroundColor = Color.LightGray;
                     break;
@@ -128,8 +131,7 @@ namespace Heartstone.Views
             if (Minionsgedrukt == false)
             {
                 Minionsgedrukt = true;
-                var uniqueMinions = minions.DistinctBy(i => i.name);
-                lvwCards.ItemsSource = uniqueMinions;
+                lvwCards.ItemsSource = minions;
                 Minions.BorderColor = Color.White;
                 Spells.BorderColor = Color.FromHex("#FCD237");
                 Weapons.BorderColor = Color.FromHex("#FCD237");
@@ -140,8 +142,7 @@ namespace Heartstone.Views
             else
             {
                 Minionsgedrukt = false;
-                var uniqueall = all.DistinctBy(i => i.name);
-                lvwCards.ItemsSource = uniqueall;
+                lvwCards.ItemsSource = all;
                 Minions.BorderColor = Color.FromHex("#FCD237");
                 currentlist = all;
             }
@@ -153,8 +154,7 @@ namespace Heartstone.Views
             if (Spellsgedrukt == false)
             {
                 Spellsgedrukt = true;
-                var uniqueSpells = spells.DistinctBy(i => i.name);
-                lvwCards.ItemsSource = uniqueSpells;
+                lvwCards.ItemsSource = spells;
                 Spells.BorderColor = Color.White;
                 Minions.BorderColor = Color.FromHex("#FCD237");
                 Weapons.BorderColor = Color.FromHex("#FCD237");
@@ -165,8 +165,7 @@ namespace Heartstone.Views
             else
             {
                 Spellsgedrukt = false;
-                var uniqueall = all.DistinctBy(i => i.name);
-                lvwCards.ItemsSource = uniqueall;
+                lvwCards.ItemsSource = all;
                 Spells.BorderColor = Color.FromHex("#FCD237");
                 currentlist = all;
             }
@@ -178,8 +177,7 @@ namespace Heartstone.Views
             if (Weaponsgedrukt == false)
             {
                 Weaponsgedrukt = true;
-                var uniqueWeapons = weapons.DistinctBy(i => i.name);
-                lvwCards.ItemsSource = uniqueWeapons;
+                lvwCards.ItemsSource = weapons;
                 Weapons.BorderColor = Color.White;
                 Spells.BorderColor = Color.FromHex("#FCD237");
                 Minions.BorderColor = Color.FromHex("#FCD237");
@@ -190,8 +188,7 @@ namespace Heartstone.Views
             else
             {
                 Weaponsgedrukt = false;
-                var uniqueall = all.DistinctBy(i => i.name);
-                lvwCards.ItemsSource = uniqueall;
+                lvwCards.ItemsSource = all;
                 Weapons.BorderColor = Color.FromHex("#FCD237");
                 currentlist = all;
             }
@@ -205,8 +202,7 @@ namespace Heartstone.Views
 
         private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var uniquecurrent = currentlist.DistinctBy(i => i.name);
-            var searchlist = uniquecurrent.Where(c => c.name.ToLower().Contains(searchbar.Text.ToLower()));
+            var searchlist = currentlist.Where(c => c.name.ToLower().Contains(searchbar.Text.ToLower()));
             lvwCards.ItemsSource = searchlist;
         }
 

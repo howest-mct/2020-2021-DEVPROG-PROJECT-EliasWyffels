@@ -11,14 +11,14 @@
                     <RowDefinition Height="70" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50" />
-                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="100"/>
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Image Margin="10,0,0,0" Grid.Row="0" Grid.Column="0"  Source="https://cdn2.iconfinder.com/data/icons/arrows-part-1/32/tiny-arrow-left-double-512.png"/>
+                <Image Margin="10,0,0,0" Grid.Row="0" Grid.Column="0"  Source="https://cdn0.iconfinder.com/data/icons/ui-essential-3/32/Thin_Arrow_Left-512.png"/>
                 <Button Grid.Row="0" Grid.Column="0" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Pressed="Button_Pressed"/>
-                <Label Grid.Row="0" Grid.Column="1" x:Name="titel" Text="" TextColor="Black" FontSize="24" HorizontalTextAlignment="Start" VerticalOptions="Center"/>
+                <Label Margin="10,0,0,0" Grid.Row="0" Grid.Column="1" x:Name="titel" Text="" TextColor="Black" FontSize="24" HorizontalTextAlignment="Start" VerticalOptions="Center"/>
                 <SearchBar x:Name="searchbar" Grid.Row="0" Grid.Column="2" Placeholder="Search Cards..." PlaceholderColor="LightGray" TextChanged="SearchBar_TextChanged"/>
             </Grid>
             

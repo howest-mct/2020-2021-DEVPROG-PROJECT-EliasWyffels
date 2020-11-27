@@ -86,6 +86,10 @@ namespace Heartstone.Views
                     ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.FromHex("#AA8F00");
                     break;
 
+                case "demon hunter":
+                    ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.FromHex("#A330C9");
+                    break;
+
                 case "neutral":
                     ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.LightGray;
                     break;
