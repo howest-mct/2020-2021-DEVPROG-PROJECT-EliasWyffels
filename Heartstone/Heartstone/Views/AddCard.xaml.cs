@@ -55,10 +55,10 @@ namespace Heartstone.Views
             bool afbeeldingOK = false;
             bool mechanicsOK = false;
             Card c = new Card();
-            c.cardId = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            c.CardId = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             if (Name.Text != null && Name.Text != "")
             {
-                c.name = Name.Text;
+                c.Name = Name.Text;
                 nameOK = true;
             }
             else
@@ -69,7 +69,7 @@ namespace Heartstone.Views
 
             if (artist.Text != null && artist.Text != "")
             {
-                c.artist = artist.Text;
+                c.Artist = artist.Text;
                 artistOK = true;
             }
             else
@@ -82,7 +82,7 @@ namespace Heartstone.Views
             bool result = int.TryParse(cost.Text,out l);
             if (result == true && cost.Text != null && cost.Text != "")
             {
-                c.cost = cost.Text;
+                c.Cost = cost.Text;
                 costOK = true;
             }
             else
@@ -91,11 +91,11 @@ namespace Heartstone.Views
                 costOK = false;
             }
 
-            c.type = type.SelectedItem.ToString();
+            c.Type = type.SelectedItem.ToString();
 
-            c.rarity = rarity.SelectedItem.ToString();
+            c.Rarity = rarity.SelectedItem.ToString();
 
-            c.playerClass = playerClass.SelectedItem.ToString();
+            c.PlayerClass = playerClass.SelectedItem.ToString();
 
             if (base64String != "leeg")
             {
@@ -118,7 +118,7 @@ namespace Heartstone.Views
                     if(allmechanics.Contains(item.ToLower().Trim()))
                     {
                         Mechanic i = new Mechanic();
-                        i.name = item;
+                        i.Name = item;
                         m.Add(i);
                         mechanicsOK = true;
                     }
@@ -128,11 +128,11 @@ namespace Heartstone.Views
                         mechanicsOK = false;
                     }
                 }
-                c.mechanics = m;
+                c.Mechanics = m;
             }
             if (nameOK == true && artistOK == true && costOK == true && afbeeldingOK == true && mechanicsOK == true)
             {
-                c.afbeelding = await HeartstoneRepository.ConvertImgToUrl(base64String);
+                c.Afbeelding = await HeartstoneRepository.ConvertImgToUrl(base64String);
                 await HeartstoneRepository.SendToDatabase(c);
 
             }

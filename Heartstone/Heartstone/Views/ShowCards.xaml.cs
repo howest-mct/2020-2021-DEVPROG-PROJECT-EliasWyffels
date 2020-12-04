@@ -45,19 +45,19 @@ namespace Heartstone.Views
             }
             foreach (Card item in lijst)
             {
-                if (item.artist != null)
+                if (item.Artist != null)
                 {
-                    if (item.type == "Minion")
+                    if (item.Type == "Minion")
                     {
                         minions.Add(item);
                         all.Add(item);
                     }
-                    if (item.type == "Spell")
+                    if (item.Type == "Spell")
                     {
                         spells.Add(item);
                         all.Add(item);
                     }
-                    if (item.type == "Weapon")
+                    if (item.Type == "Weapon")
                     {
                         weapons.Add(item);
                         all.Add(item);
@@ -65,10 +65,10 @@ namespace Heartstone.Views
                 }
                     
             }
-            all = all.OrderBy(o => o.name).ToList();
-            minions = minions.OrderBy(o => o.name).ToList();
-            spells = spells.OrderBy(o => o.name).ToList();
-            weapons = weapons.OrderBy(o => o.name).ToList();
+            all = all.OrderBy(o => o.Name).ToList();
+            minions = minions.OrderBy(o => o.Name).ToList();
+            spells = spells.OrderBy(o => o.Name).ToList();
+            weapons = weapons.OrderBy(o => o.Name).ToList();
             currentlist = all;
 
             lvwCards.ItemsSource = all;
@@ -202,7 +202,7 @@ namespace Heartstone.Views
 
         private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var searchlist = currentlist.Where(c => c.name.ToLower().Contains(searchbar.Text.ToLower()));
+            var searchlist = currentlist.Where(c => c.Name.ToLower().Contains(searchbar.Text.ToLower()));
             lvwCards.ItemsSource = searchlist;
         }
 

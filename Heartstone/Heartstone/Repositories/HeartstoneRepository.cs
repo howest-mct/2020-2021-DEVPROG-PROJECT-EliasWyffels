@@ -15,11 +15,11 @@ namespace Heartstone.Repositories
     {
         private const string key = "a1d89ce9aemshbf9e450c11e9732p15d45fjsn3bad1f763cb5";
 
-        public static async Task<List<Card>> GetCardsClass(string clas)
+        public static async Task<List<Card>> GetCardsClass(string classe)
         {
             using (HttpClient client = GetClient())
             {
-                string url = $"https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/classes/{clas}";
+                string url = $"https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/classes/{classe}";
                 try
                 {
                     string json = await client.GetStringAsync(url);
@@ -59,7 +59,7 @@ namespace Heartstone.Repositories
             IRestResponse response = client.Execute(request);
             string json = response.Content;
             Root account = JsonConvert.DeserializeObject<Root>(json);
-            return account.data.link;
+            return account.data.Link;
         }
 
 
@@ -103,11 +103,11 @@ namespace Heartstone.Repositories
             using (HttpClient client = GetClient2())
             {
                 string mechanicsList = "";
-                if (c.mechanics != null)
+                if (c.Mechanics != null)
                 {
-                    foreach (Mechanic i in c.mechanics)
+                    foreach (Mechanic i in c.Mechanics)
                     {
-                        mechanicsList = mechanicsList + "," + i.name;
+                        mechanicsList = mechanicsList + "," + i.Name;
                     }
                     mechanicsList = mechanicsList.Substring(1);
                 }

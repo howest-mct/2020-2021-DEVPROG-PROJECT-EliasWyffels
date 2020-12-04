@@ -4,26 +4,35 @@
              x:Class="Heartstone.Views.CardDetail"
              BackgroundColor="#73471C"
              NavigationPage.IconColor="Black">
+    <NavigationPage.TitleView>
+        <Label x:Name="titel" FontSize="20" FontAttributes="Bold" Text="Hello World" TextColor="Black" />
+    </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout>
-            <Image x:Name="CardImg" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="500"/>
-            <Grid BackgroundColor="Black" VerticalOptions="EndAndExpand">
+            <Image x:Name="CardImg" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" HeightRequest="400"/>
+            <Grid BackgroundColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="18"/>
+                    <RowDefinition Height="18"/>
+                    <RowDefinition Height="18"/>
+                    <RowDefinition Height="18"/>
+                    <RowDefinition Height="18"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Row="0" Grid.Column="0" Text="Type" TextColor="White"/>
-                <Label Grid.Row="1" Grid.Column="0" Text="Artist" TextColor="White"/>
-                <Label Grid.Row="2" Grid.Column="0" Text="Mechanic(s)" TextColor="White"/>
+                <Label Grid.Row="0" Grid.Column="0" Text="Type:" TextColor="White"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="Artist:" TextColor="White"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="Rarity:" TextColor="White"/>
+                <Label Grid.Row="3" Grid.Column="0" Text="Class:" TextColor="White"/>
+                <Label Grid.Row="4" Grid.Column="0" Text="Mechanic(s):" TextColor="White"/>
                 <Label Grid.Row="0" Grid.Column="1" x:Name="type" TextColor="White"/>
                 <Label Grid.Row="1" Grid.Column="1" x:Name="artist" TextColor="White"/>
-                <Label Grid.Row="2" Grid.Column="1" x:Name="mechanics" TextColor="White"/>
+                <Label Grid.Row="2" Grid.Column="1" x:Name="rarity" TextColor="White"/>
+                <Label Grid.Row="3" Grid.Column="1" x:Name="playerclass" TextColor="White"/>
+                <Label Grid.Row="4" Grid.Column="1" x:Name="mechanics" TextColor="White"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

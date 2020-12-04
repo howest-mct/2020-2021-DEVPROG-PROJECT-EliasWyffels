@@ -19,16 +19,18 @@ namespace Heartstone.Views
             SetNavColor(cardSelected);
             SetImg(cardSelected);
             SetLabels(cardSelected);
+            titel.Text = cardSelected.Name;
         }
 
         private void SetLabels(Card cardSelected)
         {
-            if (cardSelected.mechanics != null)
+            
+            if (cardSelected.Mechanics != null)
             {
                 string stringmechanics = "";
-                foreach (Mechanic item in cardSelected.mechanics)
+                foreach (Mechanic item in cardSelected.Mechanics)
                 {
-                    stringmechanics = stringmechanics + "," + item.name;
+                    stringmechanics = stringmechanics + "," + item.Name;
                 }
                 stringmechanics = stringmechanics.Substring(1);
                 mechanics.Text = stringmechanics;
@@ -37,18 +39,20 @@ namespace Heartstone.Views
             {
                 mechanics.Text = "No mechanics";
             }
-            type.Text = cardSelected.type;
-            artist.Text = cardSelected.artist;
+            type.Text = cardSelected.Type;
+            rarity.Text = cardSelected.Rarity;
+            artist.Text = cardSelected.Artist;
+            playerclass.Text = cardSelected.PlayerClass;
         }
 
         private void SetImg(Card cardSelected)
         {
-            CardImg.Source = cardSelected.afbeelding;
+            CardImg.Source = cardSelected.Afbeelding;
         }
 
         private void SetNavColor(Card cardSelected)
         {
-            switch (cardSelected.playerClass.ToLower())
+            switch (cardSelected.PlayerClass.ToLower())
             {
                 case "hunter":
                     ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.FromHex("#016E01");
@@ -92,6 +96,9 @@ namespace Heartstone.Views
 
                 case "neutral":
                     ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.LightGray;
+                    break;
+                default:
+                    ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.FromHex("#FCD237");
                     break;
             }
         }
