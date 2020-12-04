@@ -35,12 +35,19 @@ namespace ProjectApi
             foreach (var reg in queryResult.Results)
             {
                 List<Mechanic> lijst = new List<Mechanic>();
-                string[] parts = reg.mechanics.Split(",");
-                foreach (string item in parts)
+                if (reg.mechanics != null)
                 {
-                    Mechanic m = new Mechanic();
-                    m.name = item;
-                    lijst.Add(m);
+                    string[] parts = reg.mechanics.Split(",");
+                    foreach (string item in parts)
+                    {
+                        Mechanic m = new Mechanic();
+                        m.name = item;
+                        lijst.Add(m);
+                    }
+                }
+                else
+                {
+                    lijst = null;
                 }
                 cards.Add(new Card()
                 {

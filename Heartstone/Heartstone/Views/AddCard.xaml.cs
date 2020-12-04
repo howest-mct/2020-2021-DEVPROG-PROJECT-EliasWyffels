@@ -130,12 +130,20 @@ namespace Heartstone.Views
                 }
                 c.Mechanics = m;
             }
+            else
+            {
+                c.Mechanics = null;
+                mechanicsOK = true;
+            }
             if (nameOK == true && artistOK == true && costOK == true && afbeeldingOK == true && mechanicsOK == true)
             {
-                Navigation.PushAsync(new FilterPage());
                 c.Afbeelding = await HeartstoneRepository.ConvertImgToUrl(base64String);
                 await HeartstoneRepository.SendToDatabase(c);
-
+                await Navigation.PushAsync(new FilterPage());
+            }
+            else
+            {
+                Error.Text = "oeps";
             }
             
         }

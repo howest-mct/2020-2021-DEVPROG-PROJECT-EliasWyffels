@@ -16,7 +16,7 @@ namespace ProjectApi
     {
         [FunctionName("Function1")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = "submitcard")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous,"post", Route = "submitcard")] HttpRequest req,
             ILogger log)
         {
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
