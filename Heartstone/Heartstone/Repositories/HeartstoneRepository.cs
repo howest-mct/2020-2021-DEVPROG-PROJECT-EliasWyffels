@@ -63,6 +63,7 @@ namespace Heartstone.Repositories
         }
 
 
+        //Dit was de code die we in de les hebben gezien om een post te doen maar met httpclient kreeg ik de link niet returned
 
         //public static async Task<string> ConvertImgToUrl(string Image)
         //{
@@ -105,9 +106,9 @@ namespace Heartstone.Repositories
                 string mechanicsList = "";
                 if (c.Mechanics != null)
                 {
-                    foreach (Mechanic i in c.Mechanics)
+                    foreach (Mechanic item in c.Mechanics)
                     {
-                        mechanicsList = mechanicsList + "," + i.Name;
+                        mechanicsList = mechanicsList + "," + item.Name;
                     }
                     mechanicsList = mechanicsList.Substring(1);
                 }

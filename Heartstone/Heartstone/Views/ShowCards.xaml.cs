@@ -22,9 +22,9 @@ namespace Heartstone.Views
 
         private List<Card> currentlist = new List<Card>();
 
-        private bool Minionsgedrukt = false;
-        private bool Spellsgedrukt = false;
-        private bool Weaponsgedrukt = false;
+        private bool minionsgedrukt = false;
+        private bool spellsgedrukt = false;
+        private bool weaponsgedrukt = false;
         public ShowCards(string name)
         {
             InitializeComponent();
@@ -70,7 +70,6 @@ namespace Heartstone.Views
             spells = spells.OrderBy(o => o.Name).ToList();
             weapons = weapons.OrderBy(o => o.Name).ToList();
             currentlist = all;
-
             lvwCards.ItemsSource = all;
         }
 
@@ -78,49 +77,49 @@ namespace Heartstone.Views
         {
             titel.Text = name;
 
-            switch (name.ToLower())
+            switch (name)
             {
-                case "hunter":
+                case "Hunter":
                     classcolor.BackgroundColor = Color.FromHex("#016E01");
                     break;
 
-                case "warrior":
+                case "Warrior":
                     classcolor.BackgroundColor = Color.FromHex("#8E1002");
                     break;
 
-                case "priest":
+                case "Priest":
                     classcolor.BackgroundColor = Color.FromHex("#C7C19F");
                     break;
 
-                case "mage":
+                case "Mage":
                     classcolor.BackgroundColor = Color.FromHex("#0092AB");
                     break;
 
-                case "rogue":
+                case "Rogue":
                     classcolor.BackgroundColor = Color.FromHex("#4C4D48");
                     break;
 
-                case "druid":
+                case "Druid":
                     classcolor.BackgroundColor = Color.FromHex("#703606");
                     break;
 
-                case "shaman":
+                case "Shaman":
                     classcolor.BackgroundColor = Color.FromHex("#8E1002");
                     break;
 
-                case "warlock":
+                case "Warlock":
                     classcolor.BackgroundColor = Color.FromHex("#7624AD");
                     break;
 
-                case "paladin":
+                case "Paladin":
                     classcolor.BackgroundColor = Color.FromHex("#AA8F00");
                     break;
 
-                case "demon hunter":
+                case "Demon Hunter":
                     classcolor.BackgroundColor = Color.FromHex("#A330C9");
                     break;
 
-                case "neutral":
+                case "Neutral":
                     classcolor.BackgroundColor = Color.LightGray;
                     break;
             }
@@ -128,20 +127,20 @@ namespace Heartstone.Views
 
         private void Minions_Pressed(object sender, EventArgs e)
         {
-            if (Minionsgedrukt == false)
+            if (minionsgedrukt == false)
             {
-                Minionsgedrukt = true;
+                minionsgedrukt = true;
                 lvwCards.ItemsSource = minions;
                 Minions.BorderColor = Color.White;
                 Spells.BorderColor = Color.FromHex("#FCD237");
                 Weapons.BorderColor = Color.FromHex("#FCD237");
-                Spellsgedrukt = false;
-                Weaponsgedrukt = false;
+                spellsgedrukt = false;
+                weaponsgedrukt = false;
                 currentlist = minions;
             }
             else
             {
-                Minionsgedrukt = false;
+                minionsgedrukt = false;
                 lvwCards.ItemsSource = all;
                 Minions.BorderColor = Color.FromHex("#FCD237");
                 currentlist = all;
@@ -151,20 +150,20 @@ namespace Heartstone.Views
 
         private void Spells_Pressed(object sender, EventArgs e)
         {
-            if (Spellsgedrukt == false)
+            if (spellsgedrukt == false)
             {
-                Spellsgedrukt = true;
+                spellsgedrukt = true;
                 lvwCards.ItemsSource = spells;
                 Spells.BorderColor = Color.White;
                 Minions.BorderColor = Color.FromHex("#FCD237");
                 Weapons.BorderColor = Color.FromHex("#FCD237");
-                Minionsgedrukt = false;
-                Weaponsgedrukt = false;
+                minionsgedrukt = false;
+                weaponsgedrukt = false;
                 currentlist = spells;
             }
             else
             {
-                Spellsgedrukt = false;
+                spellsgedrukt = false;
                 lvwCards.ItemsSource = all;
                 Spells.BorderColor = Color.FromHex("#FCD237");
                 currentlist = all;
@@ -174,20 +173,20 @@ namespace Heartstone.Views
 
         private void Weapons_Pressed(object sender, EventArgs e)
         {
-            if (Weaponsgedrukt == false)
+            if (weaponsgedrukt == false)
             {
-                Weaponsgedrukt = true;
+                weaponsgedrukt = true;
                 lvwCards.ItemsSource = weapons;
                 Weapons.BorderColor = Color.White;
                 Spells.BorderColor = Color.FromHex("#FCD237");
                 Minions.BorderColor = Color.FromHex("#FCD237");
-                Minionsgedrukt = false;
-                Spellsgedrukt = false;
+                minionsgedrukt = false;
+                spellsgedrukt = false;
                 currentlist = weapons;
             }
             else
             {
-                Weaponsgedrukt = false;
+                weaponsgedrukt = false;
                 lvwCards.ItemsSource = all;
                 Weapons.BorderColor = Color.FromHex("#FCD237");
                 currentlist = all;

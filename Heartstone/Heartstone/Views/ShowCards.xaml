@@ -40,7 +40,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell Tapped="ViewCell_Tapped">
-                            <Frame BackgroundColor="#EDA115" Margin="5">
+                            <Frame Margin="5" BackgroundColor="{Binding Test}">
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition />

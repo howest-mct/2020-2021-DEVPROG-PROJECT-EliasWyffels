@@ -132,6 +132,7 @@ namespace Heartstone.Views
             }
             if (nameOK == true && artistOK == true && costOK == true && afbeeldingOK == true && mechanicsOK == true)
             {
+                Navigation.PushAsync(new FilterPage());
                 c.Afbeelding = await HeartstoneRepository.ConvertImgToUrl(base64String);
                 await HeartstoneRepository.SendToDatabase(c);
 
