@@ -15,16 +15,16 @@ namespace Heartstone.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ShowCards : ContentPage
     {
-        private List<Card> all = new List<Card>();
-        private List<Card> minions = new List<Card>();
-        private List<Card> weapons = new List<Card>();
-        private List<Card> spells = new List<Card>();
+        private List<Card> list_all = new List<Card>();
+        private List<Card> list_minions = new List<Card>();
+        private List<Card> list_weapons = new List<Card>();
+        private List<Card> list_spells = new List<Card>();
 
-        private List<Card> currentlist = new List<Card>();
+        private List<Card> list_current = new List<Card>();
 
-        private bool minionsgedrukt = false;
-        private bool spellsgedrukt = false;
-        private bool weaponsgedrukt = false;
+        private bool minionsGedrukt = false;
+        private bool spellsGedrukt = false;
+        private bool weaponsGedrukt = false;
         public ShowCards(string name)
         {
             InitializeComponent();
@@ -34,43 +34,47 @@ namespace Heartstone.Views
 
         private async void LoadCards(string name)
         {
-            List<Card> lijst;
+            List<Card> list_cards;
             if (name == "Custom Cards")
             {
-                lijst = await HeartstoneRepository.GetCustomCards();
+                list_cards = await HeartstoneRepository.GetCustomCards();
             }
             else
             {
-                lijst = await HeartstoneRepository.GetCardsClass(name);
+                list_cards = await HeartstoneRepository.GetCardsClass(name);
             }
-            foreach (Card item in lijst)
+
+            foreach (Card item in list_cards)
             {
+                //filter alle kaarten die geen artist hebben dus ook geen afbeelding
                 if (item.Artist != null)
                 {
                     if (item.Type == "Minion")
                     {
-                        minions.Add(item);
-                        all.Add(item);
+                        list_minions.Add(item);
+                        list_all.Add(item);
                     }
                     if (item.Type == "Spell")
                     {
-                        spells.Add(item);
-                        all.Add(item);
+                        list_spells.Add(item);
+                        list_all.Add(item);
                     }
                     if (item.Type == "Weapon")
                     {
-                        weapons.Add(item);
-                        all.Add(item);
+                        list_weapons.Add(item);
+                        list_all.Add(item);
                     }
                 }
                     
             }
-            all = all.OrderBy(o => o.Name).ToList();
-            minions = minions.OrderBy(o => o.Name).ToList();
-            spells = spells.OrderBy(o => o.Name).ToList();
-            weapons = weapons.OrderBy(o => o.Name).ToList();
-            currentlist = all;
-            lvwCards.ItemsSource = all;
+            //sorteer alle kaarten op naam in plaats van mana cost
+            list_all = list_all.OrderBy(o => o.Name).ToList();
+            list_minions = list_minions.OrderBy(o => o.Name).ToList();
+            list_spells = list_spells.OrderBy(o => o.Name).ToList();
+            list_weapons = list_weapons.OrderBy(o => o.Name).ToList();
+
+            list_current = list_all;
+            lvwCards.ItemsSource = list_all;
         }
 
         private void SetTitel(string name)
@@ -118,7 +122,9 @@ namespace Heartstone.Views
                 case "Demon Hunter":
                     classcolor.BackgroundColor = Color.FromHex("#A330C9");
                     break;
-
+                case "Custom Cards":
+                    classcolor.BackgroundColor = Color.FromHex("#FCD237");
+                    break;
                 case "Neutral":
                     classcolor.BackgroundColor = Color.LightGray;
                     break;
@@ -127,82 +133,89 @@ namespace Heartstone.Views
 
         private void Minions_Pressed(object sender, EventArgs e)
         {
-            if (minionsgedrukt == false)
+            //toon enkel de kaarte nmet een bepaald type
+            //je kan op dezelfde knop drukken om de filter ongedaan te maken
+            //voorbeeld: druk 1 keer op minion voor alle minions te zien
+            //druk er een 2de keer op om weer alle kaarten te zien
+            if (minionsGedrukt == false)
             {
-                minionsgedrukt = true;
-                lvwCards.ItemsSource = minions;
+                minionsGedrukt = true;
+                lvwCards.ItemsSource = list_minions;
                 Minions.BorderColor = Color.White;
                 Spells.BorderColor = Color.FromHex("#FCD237");
                 Weapons.BorderColor = Color.FromHex("#FCD237");
-                spellsgedrukt = false;
-                weaponsgedrukt = false;
-                currentlist = minions;
+                spellsGedrukt = false;
+                weaponsGedrukt = false;
+                list_current = list_minions;
             }
             else
             {
-                minionsgedrukt = false;
-                lvwCards.ItemsSource = all;
+                minionsGedrukt = false;
+                lvwCards.ItemsSource = list_all;
                 Minions.BorderColor = Color.FromHex("#FCD237");
-                currentlist = all;
+                list_current = list_all;
             }
             
         }
 
         private void Spells_Pressed(object sender, EventArgs e)
         {
-            if (spellsgedrukt == false)
+            
+            if (spellsGedrukt == false)
             {
-                spellsgedrukt = true;
-                lvwCards.ItemsSource = spells;
+                spellsGedrukt = true;
+                lvwCards.ItemsSource = list_spells;
                 Spells.BorderColor = Color.White;
                 Minions.BorderColor = Color.FromHex("#FCD237");
                 Weapons.BorderColor = Color.FromHex("#FCD237");
-                minionsgedrukt = false;
-                weaponsgedrukt = false;
-                currentlist = spells;
+                minionsGedrukt = false;
+                weaponsGedrukt = false;
+                list_current = list_spells;
             }
             else
             {
-                spellsgedrukt = false;
-                lvwCards.ItemsSource = all;
+                spellsGedrukt = false;
+                lvwCards.ItemsSource = list_all;
                 Spells.BorderColor = Color.FromHex("#FCD237");
-                currentlist = all;
+                list_current = list_all;
             }
 
         }
 
         private void Weapons_Pressed(object sender, EventArgs e)
         {
-            if (weaponsgedrukt == false)
+            if (weaponsGedrukt == false)
             {
-                weaponsgedrukt = true;
-                lvwCards.ItemsSource = weapons;
+                weaponsGedrukt = true;
+                lvwCards.ItemsSource = list_weapons;
                 Weapons.BorderColor = Color.White;
                 Spells.BorderColor = Color.FromHex("#FCD237");
                 Minions.BorderColor = Color.FromHex("#FCD237");
-                minionsgedrukt = false;
-                spellsgedrukt = false;
-                currentlist = weapons;
+                minionsGedrukt = false;
+                spellsGedrukt = false;
+                list_current = list_weapons;
             }
             else
             {
-                weaponsgedrukt = false;
-                lvwCards.ItemsSource = all;
+                weaponsGedrukt = false;
+                lvwCards.ItemsSource = list_all;
                 Weapons.BorderColor = Color.FromHex("#FCD237");
-                currentlist = all;
+                list_current = list_all;
             }
 
         }
 
         private void Button_Pressed(object sender, EventArgs e)
         {
+            //knop terug
             Navigation.PopAsync();
         }
 
         private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var searchlist = currentlist.Where(c => c.Name.ToLower().Contains(searchbar.Text.ToLower()));
-            lvwCards.ItemsSource = searchlist;
+            //zoek een kaart met behulp van een deel van de naam(niet hoofdletter gevoelig)
+            var searchList = list_current.Where(c => c.Name.ToLower().Contains(searchbar.Text.ToLower()));
+            lvwCards.ItemsSource = searchList;
         }
 
         private void ViewCell_Tapped(object sender, EventArgs e)

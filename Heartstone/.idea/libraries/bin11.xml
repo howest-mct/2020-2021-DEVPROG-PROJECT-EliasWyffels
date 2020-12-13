@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="bin11">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Heartstone.Android/obj/Debug/90/android/bin/classes.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Heartstone.Android/obj/Debug/90/android/bin/mono.android.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

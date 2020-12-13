@@ -17,6 +17,7 @@ namespace Heartstone.Views
         {
             InitializeComponent();
             titel.Text = cardSelected.Name;
+            //verander de kleur van navbar naar het kleur van de playerclass van de kaart
             ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.FromHex(cardSelected.Color);
             SetLabels(cardSelected);
         }
@@ -36,6 +37,7 @@ namespace Heartstone.Views
             }
             else
             {
+                //als er geen mechanics zijn toon dan geen null (niet gebruiksvriendelijk)
                 mechanics.Text = "No mechanics";
             }
             type.Text = cardSelected.Type;

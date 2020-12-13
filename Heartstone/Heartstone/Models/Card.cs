@@ -34,7 +34,10 @@ namespace Heartstone.Models
         {
             get
             {
-                if (CardId.Length < 15)
+                //indien de card lenght kleiner is dan 25 toon de foto van deze link
+                //anders toon de foto die we meegaven
+                //dit doen we omdat we met fotos van onze api werken en die van onze zelfgemaakte  api werken en die moeten appart worden gehouden
+                if (CardId.Length < 25)
                 {
                     return "https://art.hearthstonejson.com/v1/render/latest/enUS/512x/" + CardId + ".png";
                 }
@@ -93,12 +96,15 @@ namespace Heartstone.Models
                 }
             }
         }
-        public string Test
+        public string ListviewColor
         {
             get
             {
-                if(CardId.Length < 15)
+                if(CardId.Length < 25)
                 {
+                    //dit werd uitsluiten aangemaakt voor de listview alle gewone kaarten hebben de base color want die behoren allemaal tot dezelfde klasse
+                    //maar custom cards kunnen tot alle classes behoren dus om daar wat duidelijk in te brengen geven we ze het kleur van hun klasse
+                    //we kunnen hiervoor niet de de propertie color gebruiken anders zou de navbar van de gewone kaarten niet meer veranderen in de playerclasskleur
                     return "#FCD237";
                 }
                else

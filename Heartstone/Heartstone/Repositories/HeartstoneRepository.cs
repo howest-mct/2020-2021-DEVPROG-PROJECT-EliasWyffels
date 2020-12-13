@@ -14,7 +14,7 @@ namespace Heartstone.Repositories
     public static class HeartstoneRepository
     {
         private const string key = "a1d89ce9aemshbf9e450c11e9732p15d45fjsn3bad1f763cb5";
-
+        //vraag de kaarten op van een playerclass
         public static async Task<List<Card>> GetCardsClass(string classe)
         {
             using (HttpClient client = GetClient())
@@ -48,6 +48,7 @@ namespace Heartstone.Repositories
             httpclient.DefaultRequestHeaders.Add("X-RapidAPI-Key", key);
             return httpclient;
         }
+        //verander de base64string die we meesturen in een link om in de databank op te kunnen slaan
         public static async Task<string> ConvertImgToUrl(string Image)
         {
             var client = new RestClient("https://api.imgur.com/3/image");
@@ -63,7 +64,8 @@ namespace Heartstone.Repositories
         }
 
 
-        //Dit was de code die we in de les hebben gezien om een post te doen maar met httpclient kreeg ik de link niet returned
+        //Dit was de code die we in de les hebben gezien om een post te doen maar met httpclient kreeg ik de link niet returned in de responsebody
+        //via de methode hierboven wel
 
         //public static async Task<string> ConvertImgToUrl(string Image)
         //{
@@ -98,6 +100,7 @@ namespace Heartstone.Repositories
         //}
 
 
+        //verstuur custom card naar zelfgemaakte api om daar op te slaan
         public static async Task SendToDatabase(Card c)
         {
             string url = "https://hearstonecards.azurewebsites.net/api/submitcard";
@@ -133,6 +136,7 @@ namespace Heartstone.Repositories
             httpclient.DefaultRequestHeaders.Add("Accept", "application/json");
             return httpclient;
         }
+        //Vraag de custom cards op uit de zelfgemaakte api
         public static async Task<List<Card>> GetCustomCards()
         {
             using (HttpClient client = GetClient2())
